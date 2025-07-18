@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>StarMint</title>
+
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                height: 60vh !important;
+                background: url(https://www.minciencia.gob.cl/uploads/filer_public/6f/8e/6f8e43da-193b-46dd-b1f1-90cf29bf60e2/dia_de_la_astronomia.jpg) no-repeat center;
+               
+            
+                color: white;
+                font-weight: bold;
+            }
+            .formulario{
+              position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                background: transparent;
+                border-radius: 20px;
+                border: 2px solid purple;
+                backdrop-filter: blur(20px);
+
+            }
+            .formulario h1{
+                text-align: center;
+                padding: 0 0 20px 0;
+                border-bottom: 1px solid purple;
+            }
+            .formulario form{
+                padding: 0 40px;
+                box-sizing: border-box;
+                
+            }
+            form .username{
+                position: relative;
+                border-bottom: 2px solid grey;
+                margin: 30px 0;
+            }
+            .username input{
+                width: 100%;
+                padding: 0 5px;
+                height: 40px;
+                font-size: 16px;
+                border: none;
+                background: none;
+                outline: none;
+            }
+            .username label{
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                color:white;
+                transform: translateY(-50%);
+                font-size: 16px;
+                pointer-events: none;
+                transition: .5s;
+                font-weight: bold;
+
+            }
+            .username span ::before{
+                content: '';
+                position: relative;
+                top: 40px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #660a69;
+
+            }
+            .username input:focus ~ label,
+            .username input:valid ~ label{
+                top: -5px;
+                color:#660a69;
+                transition: top 0.3s ease, color 0.3s ease;
+                
+            }
+            .recordar{
+                margin: -5px 0 20px 5px;
+                cursor: pointer;
+                font-weight: bold;
+                
+            }
+            .recordar :hover{
+                text-decoration: underline;
+            }
+            input[type="submit"]{
+                width: 100%;
+                height: 50px;
+                border: 0 solid;
+                background:#660a69;
+                border-radius: 30px;
+                font-size: 18px;
+                color:white;
+                cursor: pointer;
+                outline: none;
+            }
+            input[type="submit"]:hover{
+                border-color: #350344;
+                transition: .3s ;
+                transform: scale(1.1);
+            }
+            .registrarse{
+                margin: 30px 0;
+                text-align: center;
+                font-size: 16px;
+                
+            
+            }
+            .registrarse a{
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+
+    </head>
+<body>
+    <div class="formulario">
+    <h1>Inicio de Sesion</h1>
+    <form method="post">
+        <div class="username">
+            <input type="text" required>
+            <label>Nombre de Usuario</label>
+        </div>
+        <div class="username">
+            <input type="password" required>
+            <label>Contraseña</label>
+        </div>
+        <div class="recordar">Olvido su contraseña?</div>
+        
+        <input type="submit" value="Iniciar"
+         onclick="location.href='StarMint.html'">
+        
+
+        <div class="registrarse"><a href="">Registrarse</a></div>
+
+    </form>
+    </div>
+
+
+
+</body>    
+</html>
